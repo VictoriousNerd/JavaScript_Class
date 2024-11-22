@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Exercises Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("p").mouseover(function() {
+                $(this).text("Welcom, user");
+            }); 
+            $('p').mouseout(function() {
+                $(this).text("Hello, Hover me");
+            });
+
+            var left_position = $("#name2").offset().left - $(document).scrollTop();
+            console.log('Left: ' + left_position);
+            var top_position = $("#name2").offset().top - $(document).scrollTop();
+            console.log('Right: ' + top_position);
+
+            $("#button1").prop('value', 'Save');
+
+            $('#button2').click(function() {
+                $("a").removeAttr('href');
+            });
+
+            $("#button3").click(function() {
+                $("#image").attr("src", "https://victoriousnerd.com/images/victoriousnerd-skull.svg");
+            });
+        });
+
+        function new_element() {
+                $("#header ul").append('<li>Java</li>');
+        };
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eos temporibus ut, veritatis perspiciatis dolores sint autem vero quibusdam natus, eveniet libero, repellendus dolorem est. Nihil iure perspiciatis sint maiores.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="header">
+                    <ul>
+                        <li><a href="https://www.w3resource.com/python/python-tutorial.php">Python</a></li>
+                        <li><a href="https://www.w3resource.com/php/php-home.php">PHP</a></li>
+                    </ul>
+                </div>
+                <input type="button" value="Click to add new li element" onclick="new_element()">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form id="myForm" action="#">
+                    First Name<br>
+                    <input type="text" name="firstname" id="name1" value="Mickey"><br>
+                    Last Name<br>
+                    <input type="text" name="lastname" id="name2" value="Mouse"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="button" value="Cancel" id="button1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="https://www.w3resource.com/jquery-exercises/">JQuery Exercises, Practice, Solution</a>
+                <p></p>
+                <input type="button" id="button2" value="Click to remove the link!">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="button" value="Image Swap" id="button3"><br>
+                <img src="https://victoriousnerd.com/images/hobbiesinterests/playstation-violin-large.jpg" alt="img" id="image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

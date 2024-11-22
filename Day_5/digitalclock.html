@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <img class="w-50" src="https://victoriousnerd.com/images/cat-art/creation-of-kitties.jpg" id="img" />
+    </div>
+    <div class="container d-flex flex-row">
+        <div class="row w-100" style="height: 100px;">
+            <div class="w-25 h-100 bg-primary text-center display-3" id="h"></div>
+            <div class="w-25 h-100 bg-primary text-center display-3" id="m"></div>
+            <div class="w-25 h-100 bg-primary text-center display-3" id="s"></div>
+
+        </div>
+    </div>
+
+    <script>                                    
+        setInterval(showTime, 500);
+        setInterval(animate, 500);
+
+        function showTime() {
+            var d1 = new Date();
+            var e1 = document.getElementById('h');
+            var e2 = document.getElementById('m');
+            var e3 = document.getElementById('s');
+
+            e1.innerHTML = d1.getHours();
+            e2.innerHTML = d1.getMinutes();
+            e3.innerHTML = d1.getSeconds();
+        }
+        var img = document.getElementById('img');
+        var l = 0;
+
+        function animate() {
+            l = l - 10;
+            if(l <= 0) {
+                img.style.textAlign=end;
+            } else {
+                img.style.left = 1 + "px";
+            }
+        }
+    </script>
+</body>
+</html>                                          

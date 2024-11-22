@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewTitle Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, debitis. Cum, omnis non accusantium nam aut nulla repudiandae molestiae quo beatae ab animi expedita velit perferendis quas reprehenderit voluptate quisquam.</p>
+    </div>
+
+    <script>
+        var elem = document.getElementById('p1');
+
+        elem.oncontextmenu = f1;
+
+        function f1() {
+            alert("This paragraph shows the details of this web page.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 Assignments</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body onload="fun7()">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <!-- Exercise 1 -->
+                 <table>
+                    <tr>
+                        <td>
+                            Enter 1st Number
+                        </td>
+                        <td>
+                            <input type="text" id="t1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Enter 2nd Number
+                        </td>
+                        <td>
+                            <input type="text" id="t2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="button" value="Sum" onclick="fun1()"/>
+                            <input type="button" value="Sub" onclick="fun2()"/>
+                            <input type="button" value="Mul" onclick="fun3()"/>
+                            <input type="button" value="Div" onclick="fun4()"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <p id="output"></p>
+                        </td>
+                    </tr>
+                 </table>
+
+                 <!-- Exercise 2 -->
+                 <p>
+                    Enter Number <input type="text" id="t3" size="2" style="padding-left: 5px;" />
+                    <input type="button" onclick="fun()" value="Go" />
+                    <p id="p1"></p>
+                 </p>
+
+                 <!-- Exercise 3 -->
+                 <table>
+                    <tr>
+                        <td>
+                            Enter name with (Mr/Ms)
+                        </td>
+                        <td>
+                            <input type="text" id="t4" onkeyup="fun5()"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" onclick="fun6()" value="Char At"/>
+                        </td>
+                        <td>
+                            <p id="p2"></p>
+                        </td>
+                    </tr>
+                 </table> 
+
+                 <!-- Exercise 4  ---- Issue with this one -->
+                 <p>
+                    Select Age
+                    <select id="age">
+                        <option>Select</option>
+                    </select>
+                 </p>
+
+                 <!-- Exercise 5 -->
+                 <h2 id="h2text" onmouseover="nameon()" onmouseout="nameout()">Mouse over me</h2> 
+
+                 <!-- Exercise 6 --- appends to <body> and is overwritten by Bootstrap CSS -->
+                 <form name="f1" id="f1" action="">
+                    <p>Select a color for the form:</p>
+                    <select name="a" id="a" onchange="color()">
+                        <option value="White">Select Color</option>
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Purple">Purple</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                 </form>
+
+                 <!-- Exercise 7 -->
+                 <table cellpadding="5">
+                    <tr>
+                        <td>
+                            Enter 1st Number
+                        </td>
+                        <td>
+                            <input type="text" id="t5" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Enter 2nd Number
+                        </td>
+                        <td>
+                            <input type="text" id="t6" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Enter 3rd Number
+                        </td>
+                        <td>
+                            <input type="text" id="t7" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" value="Greater" onclick="greater()" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <p id="output2"></p>
+                        </td>
+                    </tr>
+                 </table> 
+
+                 <!-- Exercise 8 -->
+                 <p id="demo" onclick="fun8()">Click to Find Subject</p>
+
+                 <!-- Exercise 9 -->
+                 
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="js/day_5_assignment.js"></script>
+
+</html>

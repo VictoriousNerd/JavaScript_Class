@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <p>Factorial is the product of all numbers from 1 to that number</p>
+        <label>Enter the number</label>
+        <input type="text" id="t1">
+        <button onclick="f1()">Factorial</button>
+        <label for="" id="lblfact"></label>
+    </div>
+
+    <script>
+        function f1() {
+            var no = document.getElementById("t1").value;
+            fact = 1;
+            for(i=1; i<=no; i++) {
+                fact = fact * i;
+            };
+            document.getElementById("lblfact").innerHTML = fact
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Elements Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <button type="button" onclick="windowSize()">Get Window Size</button>
+        <button type="button" onclick="getResolution()">Get Resolution</button>
+        <button type="button" onclick="getAvailSize()">Get Available Size</button>
+        <button type="button" onclick="getColorDepth()">Get Color Depth</button>
+        <button type="button" onclick="getPixelDepth()">Get Pixel Depth</button>
+
+    </div>
+    <script>
+        function windowSize() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            alert("Width: " + w + " Height: " + h);
+        }
+
+        function getResolution() {
+            alert("Your screen is: " + screen.width + "x" + screen.height);
+        }
+
+        function getAvailSize() {
+            alert("Avaialable Screen Width: " + screen.availWidth + ", Height: " + screen.availHeight);
+        }
+
+        function getColorDepth() {
+            alert("Your screen color depth is: " + screen.colorDepth);
+        }
+ 
+        function getPixelDepth() {
+            alert("Your screen pixel depth is: " + screen.pixelDepth);
+        }
+    </script>
+</body>
+</html>
